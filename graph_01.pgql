@@ -1,0 +1,43 @@
+CREATE PROPERTY GRAPH draft_1632626942437
+  VERTEX TABLES (
+    graph.neo_channel_storage
+      KEY ( id )
+      PROPERTIES ( channel_id, id, qty_prein, qty_preout, qty_storage, sku_code ),
+    graph.neo_share_storage
+      KEY ( id )
+      PROPERTIES ( id, qty_prein, qty_preout, qty_storage, share_store_id, sku_code ),
+    graph.neo_share_store
+      KEY ( id )
+      PROPERTIES ( id, name ),
+    graph.neo_channel
+      KEY ( id )
+      PROPERTIES ( id, name ),
+    graph.neo_storage
+      KEY ( id )
+      PROPERTIES ( id, qty_available, qty_prein, qty_preout, sku_code, warehouse_id ),
+    graph.neo_warehouse
+      KEY ( id )
+      PROPERTIES ( id, name )
+  )
+  EDGE TABLES (
+    graph.neo_warehouse_share_ratio
+      SOURCE KEY ( warehouse_id ) REFERENCES neo_warehouse
+      DESTINATION KEY ( share_store_id ) REFERENCES neo_share_store
+      PROPERTIES ( id, ratio, share_store_id, warehouse_id ),
+    graph.neo_share_channel_ratio
+      SOURCE KEY ( share_store_id ) REFERENCES neo_share_store
+      DESTINATION KEY ( channel_id ) REFERENCES neo_channel
+      PROPERTIES ( channel_id, id, ratio, share_store_id ),
+    graph.neo_channel_storage AS neo_channel_storage_neo_channel
+      SOURCE KEY ( id ) REFERENCES neo_channel_storage
+      DESTINATION KEY ( channel_id ) REFERENCES neo_channel
+      NO PROPERTIES,
+    graph.neo_share_storage AS neo_share_storage_neo_share_store
+      SOURCE KEY ( id ) REFERENCES neo_share_storage
+      DESTINATION KEY ( share_store_id ) REFERENCES neo_share_store
+      NO PROPERTIES,
+    graph.neo_storage AS neo_storage_neo_warehouse
+      SOURCE KEY ( id ) REFERENCES neo_storage
+      DESTINATION KEY ( warehouse_id ) REFERENCES neo_warehouse
+      NO PROPERTIES
+  )
