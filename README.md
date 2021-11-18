@@ -57,7 +57,13 @@ table rows per each table
 
 * graph_02_query.pgql  (select query for "graph_02".)
 
-  query result
+  query result (Test in ADW - graph Studio)
 
+  ![image](https://github.com/guang-xu/orace-graph/blob/master/img/pgql_02_model_query_response_time.png) 
+  
+  query result (Test in java application (not jshell) )
+  
+  ![image](https://github.com/guang-xu/orace-graph/blob/master/img/pgql_02_model_query_response_time.png) 
+    
   ![image](https://github.com/guang-xu/orace-graph/blob/master/img/pgql_02_model_query_response_time.png) 
 
