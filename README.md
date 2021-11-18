@@ -23,7 +23,7 @@ This project does  not complete yet and will  continuiosly discover how re-model
 ![image](https://github.com/guang-xu/orace-graph/blob/master/img/table.png)  
 table rows per each table  
 ![image](https://github.com/guang-xu/orace-graph/blob/master/img/table_rows.png)  
-
+* query.sql (query for relational tables )
 ### The original rdb model based graph 
 * graph_01.pgql  
   The "graph_01.pgql" file contains pgql statement to create a schema type of graph.  
