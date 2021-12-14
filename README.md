@@ -2,7 +2,7 @@
 
 ### Introduction 
 This repo contains test data and serveral scripts to generate a graph model in oracle database.  
-The Oracle database version is 21c（In 21c support generate PG_VIEW type of graph).  
+The Oracle database version is 21c（Graph Server and Client 21.4 supports Property Graph views).
 Whole test data is formated csv.  
 
 This project does  not complete yet and will  continuiosly discover how re-model the typical OTLP case or model to graph.  
@@ -19,9 +19,9 @@ This project does  not complete yet and will  continuiosly discover how re-model
 * neo_warehouse_share_ratio.csv
 
 ### scripts  
-* create table.txt (generate rdb regular table)  
+* create_table.sql (generates rdb regular table)  
 ![image](https://github.com/guang-xu/orace-graph/blob/master/img/table.png)  
-table rows per each table  
+* table rows per each table  
 ![image](https://github.com/guang-xu/orace-graph/blob/master/img/table_rows.png)  
 * query.sql (query for relational tables )
 ### The original rdb model based graph 
@@ -40,7 +40,7 @@ table rows per each table
   And there is no meaningful if one query runs over  second level.
 
 ### The flat rdb model (merge data into one table) based graph 
-* create_table_02.txt
+* create_table_02.sql
   ![image](https://github.com/guang-xu/orace-graph/blob/master/img/table.png) 
 
 * graph_02.pgql （base on flat rdb model, Schema Object）
