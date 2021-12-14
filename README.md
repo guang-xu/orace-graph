@@ -2,7 +2,7 @@
 
 ### Introduction 
 This repo contains test data and serveral scripts to generate a graph model in oracle database.  
-The Oracle database version is 21c（In 21c support generate PG_VIEW type of graph).  
+The Oracle database version is 21c（Graph Server and Client 21.4 supports Property Graph views).
 Whole test data is formated csv.  
 
 This project does  not complete yet and will  continuiosly discover how re-model the typical OTLP case or model to graph.  
