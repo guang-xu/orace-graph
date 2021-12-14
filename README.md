@@ -19,9 +19,9 @@ This project does  not complete yet and will  continuiosly discover how re-model
 * neo_warehouse_share_ratio.csv
 
 ### scripts  
-* create table.txt (generate rdb regular table)  
+* create_table.sql (generates rdb regular table)  
 ![image](https://github.com/guang-xu/orace-graph/blob/master/img/table.png)  
-table rows per each table  
+* table rows per each table  
 ![image](https://github.com/guang-xu/orace-graph/blob/master/img/table_rows.png)  
 * query.sql (query for relational tables )
 ### The original rdb model based graph 
@@ -40,7 +40,7 @@ table rows per each table
   And there is no meaningful if one query runs over  second level.
 
 ### The flat rdb model (merge data into one table) based graph 
-* create_table_02.txt
+* create_table_02.sql
   ![image](https://github.com/guang-xu/orace-graph/blob/master/img/table.png) 
 
 * graph_02.pgql （base on flat rdb model, Schema Object）
